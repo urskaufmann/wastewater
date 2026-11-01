@@ -357,13 +357,13 @@ The detailpoints can be visualized with a sql-expression, that is already saved 
 
 - delete the sql-expression, that is already written in the field and choose in the rightmost tool **visualize profile_geometry**
 
-.. figure:: images/profile_geometrie_stored_sql.jpg
+.. figure:: images/profile_geometry_stored_sql.jpg  
    :scale: 50 %
 
 
 - choose Execute, Load as new layer and enable the Geometry column
 
-.. figure:: images/profile_geometrie_load_layer.jpg
+.. figure:: images/profile_geometry_load_layer.jpg
    :scale: 50 %
 
 
