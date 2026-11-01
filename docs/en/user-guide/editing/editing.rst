@@ -370,6 +370,8 @@ The detailpoints can be visualized with a sql-expression, that is already saved 
 - Load Layer creates a new point layer with the detailpoints. Zoom to the new layer
 
 
+
+
 Split a reach (channel) into different reaches
 -----------------------------------------------
 
