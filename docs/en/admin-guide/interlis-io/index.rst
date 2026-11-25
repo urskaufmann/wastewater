@@ -100,11 +100,17 @@ If you have an active selection in the nodes and/or reaches layer, you can choos
 
 .. figure:: images/tww_interlis_export_selection.png
 
+.. note::
+   If you choose to export only a selection, some labels may not be included in the export; this is because TWW only processes labels for the data you have explicitly selected—not for items such as manholes that might be included in the export simply because a connected reach was selected. See next chapter Label Export
 
 Label export
 ------------
 
+As a rule, labels are not included during data exchange. They may be necessary, however, when data is submitted to a "RegioGIS platform" that is intended to display labels but does not generate them itself. 
+
 The export tools is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
+
+TWW uses the standard QGIS function to store data from QGIS’s automatic labeling feature. This process involves preparing all labels present in the QGIS project. However, only labels from the layers `vw_tww_wastewater_structure`, `vw_tww_reach`, and `vw_tww_catchment_area` are required for the export. It is advisable to disable all other labels (such as those from the official cadastral survey) before performing the export; otherwise, these labels will still be processed—even though they are not exported—which unnecessarily increases processing time.
 
 .. note::
    Only choose either Werkplan 1:500 or Werkplan 1:250. The latter may give you a more accurarte placement while printing labels in the scale 1:500. Choosing both scales will give you duplicate label positions - so avoid this! You will not be able to distinguish anymore which are the labels for 1:250 and 1:500 in the exported xtf file as both will get the plantype = "Werkplan" (currently VSA-DSS / SIA405 Abwasser 2020.x only supports one scale - this might change in a future release).
